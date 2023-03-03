@@ -5,10 +5,6 @@ import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import faaSeal from '../public/images/faa_seal.png'
 import topOperator from '../public/images/top_operator.png'
 
-export const metadata = {
-  title: 'Home',
-}
-
 export default async function Index() {
   return (
     <>
