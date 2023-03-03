@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import booneInField from '../public/images/boone_in_field.jpg'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
-import faaSeal from '../public/images/faa_seal.png'
+import faaSeal from '../public/images/faa_seal.jpg'
 import topOperator from '../public/images/top_operator.png'
 
 export default async function Index() {
