@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+import booneInField from '../public/images/boone_in_field.jpg'
+import booneUASLogo from '../public/images/boone_uas_logo.jpg'
+import faaSeal from '../public/images/faa_seal.png'
+import topOperator from '../public/images/top_operator.png'
+
 export const metadata = {
   title: 'Home',
 }
@@ -96,12 +101,7 @@ export default async function Index() {
           <div className='mx-auto grid max-w-7xl grid-cols-2 py-16 px-4 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex flex-col items-start justify-start px-2'>
               <div className='w-1/2'>
-                <Image
-                  src='/images/boone_uas_logo.jpg'
-                  alt='Boone UAS Logo'
-                  width={500}
-                  height={500}
-                />
+                <Image src={booneUASLogo} alt='Boone UAS Logo' />
               </div>
               <h2 className='mt-4 text-xl md:mt-6 md:text-3xl'>
                 Drone Service Provider
@@ -112,10 +112,8 @@ export default async function Index() {
             </div>
             <div className='col-span-1 m-auto px-2'>
               <Image
-                src='/images/boone_in_field.jpg'
+                src={booneInField}
                 alt='Owner flying drone in the field'
-                width={1200}
-                height={800}
                 priority
               />
             </div>
@@ -147,12 +145,7 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 sm:px-6 md:grid md:grid-cols-2 md:divide-x-2 md:divide-gray-300 lg:px-16'>
             <div className='col-span-1 px-8 py-2 md:p-8'>
-              <Image
-                src='/images/boone_in_field.jpg'
-                alt='Owner profile picture'
-                width={720}
-                height={480}
-              />
+              <Image src={booneInField} alt='Owner profile picture' />
             </div>
             <div className='col-span-1 flex flex-col items-start justify-center px-8 py-2 md:p-8'>
               <h3 className='my-2 text-2xl font-semibold'>Brian Boone</h3>
@@ -166,20 +159,10 @@ export default async function Index() {
               </p>
               <div className='flex items-center justify-center'>
                 <div>
-                  <Image
-                    src='/images/faa_seal.jpg'
-                    alt='TOP Operator I'
-                    width={480}
-                    height={480}
-                  />
+                  <Image src={faaSeal} alt='TOP Operator I' />
                 </div>
                 <div>
-                  <Image
-                    src='/images/top_operator.png'
-                    alt='TOP Operator I'
-                    width={480}
-                    height={480}
-                  />
+                  <Image src={topOperator} alt='TOP Operator I' />
                 </div>
               </div>
               {/* <button className='my-2 bg-gray-900 px-4 py-2 text-sm text-zinc-50'>
@@ -193,17 +176,6 @@ export default async function Index() {
           <div className='mx-auto max-w-7xl py-16 sm:px-6 lg:px-16'>
             <div className='flex items-center justify-center px-8 lg:px-0'>
               <h1>Clients slider here</h1>
-              {/*<!-- <div className="w-3/4 sm:w-1/2 md:w-1/3 lg:w-full">
-                <Image src='/images/top_operator.png' alt="TOP Operator I" width={480} height={480} />
-              </div>
-            </div>
-            <div className="px-8 pt-8 lg:pt-0 col-span-3">
-              <p className="text-sm lg:text-base">
-                As a member of the Association for Uncrewed Vehicle Systems International (AUVSI), Boone UAS has reached TOP Operator I. The AUVSI Trusted Operator Program (TOP) fills the gap between minimally prescriptive regulations and a higher level of demonstrated knowledge, flight proficiency, safety, and risk management practices that is expected to be valued by employers and customers of commercial USA operators. By leveraging TOP Operator accumen, Boone UAS boasts a perfect safety score with zero recordable safety incidents. At Boone UAS, safety is a top priority that starts long before a drone takes flight.
-                
-                We're certified, insured, and passionate about drone safety. We're ready to take on any job big or small because we offer aerial solutions for everyone.
-              </p>
-            </div> --> */}
             </div>
           </div>
         </section>
