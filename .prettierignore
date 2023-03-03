@@ -1,0 +1,11 @@
+.next/
+.vscode/
+db_models/
+hooks/
+models/
+node_modules/
+posts/
+public/
+schemas/
+styles/
+util/

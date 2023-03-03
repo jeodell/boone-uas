@@ -1,0 +1,92 @@
+'use client'
+
+import { Fragment, useEffect, useState } from 'react'
+
+import { Disclosure } from '@headlessui/react'
+import {
+  Bars3Icon,
+  XMarkIcon,
+  SunIcon,
+  MoonIcon,
+} from '@heroicons/react/24/outline'
+
+import NavigationItems from './NavigationItems'
+import { mergeClassNames } from '../../util/helper'
+
+export default function Navbar() {
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    darkMode
+      ? document.body.classList.add('dark', 'bg-gray-800')
+      : document.body.classList.remove('dark', 'bg-gray-800')
+  }, [darkMode])
+
+  const navbarBgClasses =
+    'bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 hover:bg-gray-200'
+
+  return (
+    <Disclosure
+      as='nav'
+      className='fixed z-50 w-full bg-gray-50 dark:bg-gray-900'
+    >
+      {({ open }) => (
+        <Fragment>
+          <div className='mx-auto px-2 sm:px-6 md:px-8'>
+            {/* TODO add back md:justify-end */}
+            <div className='flex h-16 flex-1 items-center justify-between'>
+              {/* Mobile menu button*/}
+              {/* TODO add back md:hidden */}
+              <div className='flex items-center'>
+                <Fragment>
+                  <Disclosure.Button
+                    className={mergeClassNames(
+                      'inline-flex items-center justify-center rounded-md p-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:text-zinc-50',
+                      navbarBgClasses,
+                    )}
+                  >
+                    <span className='sr-only'>Open main menu</span>
+                    {open ? (
+                      <XMarkIcon className='block h-6 w-6' aria-hidden='true' />
+                    ) : (
+                      <Bars3Icon className='block h-6 w-6' aria-hidden='true' />
+                    )}
+                  </Disclosure.Button>
+                </Fragment>
+              </div>
+              {/* Dark mode toggle buttons */}
+              <div className='flex items-center'>
+                {darkMode ? (
+                  <button
+                    onClick={() => setDarkMode(false)}
+                    className='rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none'
+                  >
+                    <span className='sr-only'>Use light mode</span>
+                    <SunIcon className='h-6 w-6' aria-hidden='true' />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => setDarkMode(true)}
+                    className='rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none'
+                  >
+                    <span className='sr-only'>Use dark mode</span>
+                    <MoonIcon className='h-5 w-5' aria-hidden='true' />
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* TODO add back md:hidden */}
+          <Disclosure.Panel className='dark:bg-gray-900'>
+            <div className='space-y-1 px-2 pt-2 pb-3'>
+              <ul className='space-y-2'>
+                <NavigationItems classes={navbarBgClasses} />
+              </ul>
+            </div>
+          </Disclosure.Panel>
+        </Fragment>
+      )}
+    </Disclosure>
+  )
+}
