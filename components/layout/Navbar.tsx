@@ -33,11 +33,9 @@ export default function Navbar() {
       {({ open }) => (
         <Fragment>
           <div className='mx-auto px-2 sm:px-6 md:px-8'>
-            {/* TODO add back md:justify-end */}
-            <div className='flex h-16 flex-1 items-center justify-between'>
+            <div className='flex h-16 flex-1 items-center justify-between md:justify-end'>
               {/* Mobile menu button*/}
-              {/* TODO add back md:hidden */}
-              <div className='flex items-center'>
+              <div className='flex items-center md:hidden'>
                 <Fragment>
                   <Disclosure.Button
                     className={mergeClassNames(
@@ -53,6 +51,14 @@ export default function Navbar() {
                     )}
                   </Disclosure.Button>
                 </Fragment>
+              </div>
+              {/* Desktop menu */}
+              <div className='hidden md:flex md:flex-1 md:items-center md:justify-between'>
+                <div className='ml-6'>
+                  <ul className='flex space-x-4'>
+                    <NavigationItems classes={navbarBgClasses} />
+                  </ul>
+                </div>
               </div>
               {/* Dark mode toggle buttons */}
               <div className='flex items-center'>
@@ -77,8 +83,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* TODO add back md:hidden */}
-          <Disclosure.Panel className='dark:bg-gray-900'>
+          <Disclosure.Panel className='dark:bg-gray-900 md:hidden'>
             <div className='space-y-1 px-2 pt-2 pb-3'>
               <ul className='space-y-2'>
                 <NavigationItems classes={navbarBgClasses} />
