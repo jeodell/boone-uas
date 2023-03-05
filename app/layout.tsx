@@ -66,7 +66,7 @@ export default async function RootLayout({
     >
       <body>
         <Navbar />
-        <main className='min-h-screen dark:bg-gray-800'>
+        <main className='mt-16 min-h-screen dark:bg-gray-800'>
           <div>{children}</div>
         </main>
       </body>
