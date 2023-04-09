@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 import NavigationItems from './NavigationItems'
-import { mergeClassNames } from '../../util/helper'
+import { mergeClassNames } from '../util/helper'
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false)

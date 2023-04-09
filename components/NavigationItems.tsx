@@ -4,7 +4,7 @@ import { Disclosure } from '@headlessui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { getNavigationItems, mergeClassNames } from '../../util/helper'
+import { getNavigationItems, mergeClassNames } from '../util/helper'
 
 type Props = {
   classes: string

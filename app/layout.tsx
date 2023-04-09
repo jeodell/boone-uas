@@ -10,7 +10,7 @@ import {
 } from 'next/font/google'
 
 import '../styles/globals.css'
-import Navbar from '../components/layout/Navbar'
+import Navbar from '../components/Navbar'
 
 export const metadata = {
   title: 'Boone UAS',

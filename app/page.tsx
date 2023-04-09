@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import ClientsSlider from '../components/ClientsSlider'
 import booneInField from '../public/images/boone_in_field.jpg'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import faaSeal from '../public/images/faa_seal.jpg'
@@ -89,7 +90,7 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 sm:px-6 lg:px-16'>
             <div className='flex items-center justify-center px-8 lg:px-0'>
-              <h1 className='dark:text-zinc-200'>Clients slider here</h1>
+              <ClientsSlider />
             </div>
           </div>
         </section>
