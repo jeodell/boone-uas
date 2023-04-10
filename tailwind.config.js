@@ -24,5 +24,21 @@ module.exports = {
       sans: ['var(--font-barlow)'],
       mono: ['var(--font-roboto-mono)'],
     },
-  },
+    extend: {
+      animation: {
+        marquee: 'marquee 25s linear infinite',
+        marquee2: 'marquee2 25s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(calc(-264px * 7))' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(calc(264px * 7))' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
+    },
+  }
 }
