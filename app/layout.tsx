@@ -24,34 +24,40 @@ export const metadata = {
 const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
+  subsets: ['latin'],
 })
 
 const roboto_mono = Roboto_Mono({
   variable: '--font-roboto-mono',
   display: 'swap',
+  subsets: ['latin'],
 })
 
 const poppins = Poppins({
   variable: '--font-poppins',
   display: 'swap',
   weight: '400',
+  subsets: ['latin'],
 })
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
   display: 'swap',
   weight: '400',
+  subsets: ['latin'],
 })
 
 const barlow = Barlow({
   variable: '--font-barlow',
   display: 'swap',
   weight: '400',
+  subsets: ['latin'],
 })
 
 const josefin_sans = Josefin_Sans({
   variable: '--font-josefin-sans',
   display: 'swap',
+  subsets: ['latin'],
 })
 
 export default async function RootLayout({
