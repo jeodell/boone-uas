@@ -1,9 +1,9 @@
 .marquee {
-  animation: marquee 10s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 .marquee2 {
-  animation: marquee2 10s linear infinite;
+  animation: marquee2 25s linear infinite;
 }
 
 @keyframes marquee {
