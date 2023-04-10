@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import big6 from '../public/images/big6_logo.jpeg'
+import big6 from '../public/images/big6_logo.jpg'
 import dronegenuity from '../public/images/dronegenuity_logo.png'
 import dronevideos from '../public/images/dronevideos_logo.png'
-import flyguys from '../public/images/flyguys_logo.jpeg'
+import flyguys from '../public/images/flyguys_logo.jpg'
 import frankblum from '../public/images/frankblum_logo.png'
 import giemeroofing from '../public/images/giemeroofing_logo.png'
-import iqcontracting from '../public/images/iqcontracting_logo.jpeg'
+import iqcontracting from '../public/images/iqcontracting_logo.jpg'
 
 export default function ClientsSlider() {
   return (
