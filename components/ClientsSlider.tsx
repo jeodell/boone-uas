@@ -7,86 +7,87 @@ import flyguys from '../public/images/flyguys_logo.jpg'
 import frankblum from '../public/images/frankblum_logo.png'
 import giemeroofing from '../public/images/giemeroofing_logo.png'
 import iqcontracting from '../public/images/iqcontracting_logo.jpg'
+import classes from '../styles/ClientsSlider.module.css'
 
 export default function ClientsSlider() {
   return (
     <div className='relative flex overflow-x-hidden'>
-      <div className='flex animate-marquee items-center whitespace-nowrap py-12'>
-        <Image
-          src={big6}
-          className='mx-12'
-          width={200}
+      <div
+        className={`${classes.marquee} flex items-center whitespace-nowrap py-12`}
+      >
+        <img
+          src={`${big6.src}`}
+          className='mx-12 w-40'
           alt='Big 6 Media Logo'
         />
-        <Image
-          src={dronegenuity}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${dronegenuity.src}`}
+          className='mx-12 w-40'
           alt='Dronegenuity Logo'
         />
-        <Image
-          src={dronevideos}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${dronevideos.src}`}
+          className='mx-12 w-40'
           alt='Drone Videos Logo'
         />
-        <Image src={flyguys} className='mx-12' width={200} alt='FlyGuys Logo' />
-        <Image
-          src={frankblum}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${flyguys.src}`}
+          className='mx-12 w-40'
+          alt='Fly Guys Logo'
+        />
+        <img
+          src={`${frankblum.src}`}
+          className='mx-12 w-40'
           alt='Frank Blum Logo'
         />
-        <Image
-          src={giemeroofing}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${giemeroofing.src}`}
+          className='mx-12 w-40'
           alt='Gieme Roofing Logo'
         />
-        <Image
-          src={iqcontracting}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${iqcontracting.src}`}
+          className='mx-12 w-40'
           alt='IQ Contracting Logo'
         />
       </div>
 
-      <div className='absolute top-0 flex animate-marquee2 items-center whitespace-nowrap py-12'>
-        <Image
-          src={big6}
-          className='mx-12'
-          width={200}
+      <div
+        className={`${classes.marquee2} absolute top-0 flex items-center whitespace-nowrap py-12`}
+      >
+        <img
+          src={`${big6.src}`}
+          className='mx-12 w-40'
           alt='Big 6 Media Logo'
         />
-        <Image
-          src={dronegenuity}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${dronegenuity.src}`}
+          className='mx-12 w-40'
           alt='Dronegenuity Logo'
         />
-        <Image
-          src={dronevideos}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${dronevideos.src}`}
+          className='mx-12 w-40'
           alt='Drone Videos Logo'
         />
-        <Image src={flyguys} className='mx-12' width={200} alt='FlyGuys Logo' />
-        <Image
-          src={frankblum}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${flyguys.src}`}
+          className='mx-12 w-40'
+          alt='Fly Guys Logo'
+        />
+        <img
+          src={`${frankblum.src}`}
+          className='mx-12 w-40'
           alt='Frank Blum Logo'
         />
-        <Image
-          src={giemeroofing}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${giemeroofing.src}`}
+          className='mx-12 w-40'
           alt='Gieme Roofing Logo'
         />
-        <Image
-          src={iqcontracting}
-          className='mx-12'
-          width={200}
+        <img
+          src={`${iqcontracting.src}`}
+          className='mx-12 w-40'
           alt='IQ Contracting Logo'
         />
       </div>
