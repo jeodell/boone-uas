@@ -14,14 +14,6 @@ import NavigationItems from './NavigationItems'
 import { mergeClassNames } from '../util/helper'
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  useEffect(() => {
-    darkMode
-      ? document.body.classList.add('dark', 'bg-gray-800')
-      : document.body.classList.remove('dark', 'bg-gray-800')
-  }, [darkMode])
-
   const navbarBgClasses =
     'bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 hover:bg-gray-200'
 
@@ -60,31 +52,11 @@ export default function Navbar() {
                   </ul>
                 </div>
               </div>
-              {/* Dark mode toggle buttons */}
-              <div className='flex items-center'>
-                {darkMode ? (
-                  <button
-                    onClick={() => setDarkMode(false)}
-                    className='rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none'
-                  >
-                    <span className='sr-only'>Use light mode</span>
-                    <SunIcon className='h-6 w-6' aria-hidden='true' />
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => setDarkMode(true)}
-                    className='rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none'
-                  >
-                    <span className='sr-only'>Use dark mode</span>
-                    <MoonIcon className='h-5 w-5' aria-hidden='true' />
-                  </button>
-                )}
-              </div>
             </div>
           </div>
 
           <Disclosure.Panel className='dark:bg-gray-900 md:hidden'>
-            <div className='space-y-1 px-2 pt-2 pb-3'>
+            <div className='space-y-1 px-2 pb-3 pt-2'>
               <ul className='space-y-2'>
                 <NavigationItems classes={navbarBgClasses} />
               </ul>
