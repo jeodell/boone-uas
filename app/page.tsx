@@ -36,7 +36,7 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 px-4 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-1 flex items-center justify-center md:block md:self-center md:pl-8'>
-              <h6 className='text-xl font-semibold dark:text-zinc-200 md:w-[4ch] md:text-base'>
+              <h6 className='text-xl font-bold dark:text-zinc-200 md:w-[4ch] md:text-base'>
                 Our Services
               </h6>
             </div>
@@ -80,15 +80,15 @@ export default async function Index() {
                   <Image src={topOperator} alt='TOP Operator I' />
                 </div>
               </div>
-              {/* <button className='my-2 bg-gray-900 px-4 py-2 text-sm text-zinc-50'>
-                <a href='#contact'>Let&apos;s Work Together</a>
-              </button> */}
             </div>
           </div>
         </section>
         <section id='clients'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 sm:px-6 lg:px-16'>
+            <h3 className='text-center text-3xl font-medium dark:text-zinc-200'>
+              Our Clients
+            </h3>
             <div className='flex items-center justify-center px-8 lg:px-0'>
               <ClientsSlider />
             </div>
