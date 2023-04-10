@@ -4,10 +4,6 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  images: {
-    domains: ['images.unsplash.com'],
-    dangerouslyAllowSVG: true,
-  },
 }
 
 module.exports = nextConfig
