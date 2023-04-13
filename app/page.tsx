@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import ClientsSlider from '../components/ClientsSlider'
+import booneAndSon from '../public/images/boone_and_son.jpg'
 import booneInField from '../public/images/boone_in_field.jpg'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import faaSeal from '../public/images/faa_seal.jpg'
@@ -11,7 +12,7 @@ export default async function Index() {
     <>
       <main id='home'>
         <section id='hero'>
-          <div className='mx-auto grid max-w-7xl grid-cols-2 py-16 px-4 sm:px-6 lg:px-16'>
+          <div className='mx-auto grid max-w-7xl grid-cols-2 px-4 py-16 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex flex-col items-start justify-start px-2'>
               <div className='w-1/2'>
                 <Image src={booneUASLogo} alt='Boone UAS Logo' />
@@ -34,7 +35,7 @@ export default async function Index() {
         </section>
         <section id='services'>
           <div className='bg-gray-300 py-[1px]' />
-          <div className='mx-auto max-w-7xl py-16 px-4 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
+          <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-1 flex items-center justify-center md:block md:self-center md:pl-8'>
               <h6 className='text-xl font-bold dark:text-zinc-200 md:w-[4ch] md:text-base'>
                 Our Services
@@ -56,11 +57,11 @@ export default async function Index() {
         </section>
         <section id='about'>
           <div className='bg-gray-300 py-[1px]' />
-          <div className='mx-auto max-w-7xl py-16 sm:px-6 md:grid md:grid-cols-2 md:divide-x-2 md:divide-gray-300 lg:px-16'>
-            <div className='col-span-1 px-8 py-2 md:p-8'>
-              <Image src={booneInField} alt='Owner profile picture' />
+          <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 xs:divide-x-2 xs:divide-gray-300 sm:px-6 lg:px-16'>
+            <div className='col-span-1 flex items-center p-12 xs:p-4 sm:p-8 md:p-16 lg:p-20'>
+              <Image src={booneAndSon} alt='Owner profile picture' />
             </div>
-            <div className='col-span-1 flex flex-col items-start justify-center px-8 py-2 md:p-8'>
+            <div className='col-span-1 flex flex-col items-start justify-center px-8 py-2 xs:p-8'>
               <h3 className='my-2 text-2xl font-semibold dark:text-zinc-200'>
                 Brian Boone
               </h3>
@@ -96,7 +97,7 @@ export default async function Index() {
         </section>
         <section id='contact'>
           <div className='bg-gray-300 py-[1px]' />
-          <div className='mx-auto mt-16 mb-4 max-w-7xl sm:px-6 lg:px-16'>
+          <div className='mx-auto mb-4 mt-16 max-w-7xl sm:px-6 lg:px-16'>
             <div className='px-8'>
               <h3 className='text-3xl font-medium dark:text-zinc-200'>
                 Need a drone service?
