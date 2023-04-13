@@ -4,6 +4,7 @@ import ClientsSlider from '../components/ClientsSlider'
 import booneAndSon from '../public/images/boone_and_son.jpg'
 import booneInField from '../public/images/boone_in_field.jpg'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
+import booneWithDrone from '../public/images/boone_with_drone.jpg'
 import faaSeal from '../public/images/faa_seal.jpg'
 import topOperator from '../public/images/top_operator.png'
 
@@ -59,7 +60,7 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 xs:divide-x-2 xs:divide-gray-300 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex items-center p-12 xs:p-4 sm:p-8 md:p-16 lg:p-20'>
-              <Image src={booneAndSon} alt='Owner profile picture' />
+              <Image src={booneWithDrone} alt='Owner profile picture' />
             </div>
             <div className='col-span-1 flex flex-col items-start justify-center px-8 py-2 xs:p-8'>
               <h3 className='my-2 text-2xl font-semibold dark:text-zinc-200'>
