@@ -40,9 +40,9 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-1 flex items-center justify-center md:block md:self-center md:pl-8'>
-              <h6 className='text-xl font-bold dark:text-zinc-200 md:w-[4ch] md:text-base'>
+              <h3 className='text-xl font-bold dark:text-zinc-200 md:w-[4ch] md:text-base'>
                 Our Services
-              </h6>
+              </h3>
             </div>
             <div className='grid grid-cols-2 pt-4 md:col-span-2 md:pt-0'>
               <div className='col-span-1 px-1'>
