@@ -1,0 +1,29 @@
+.slideshow {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.next,
+.prev {
+  background: white;
+  color: grey;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
