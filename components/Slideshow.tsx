@@ -88,8 +88,8 @@ export default function Slideshow() {
               src={image.src}
               alt={image.src}
               loading='eager'
-              width={1400}
-              height={1400}
+              width={480}
+              height={480}
               priority
             />
           </div>
