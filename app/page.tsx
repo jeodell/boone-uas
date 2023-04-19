@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import ClientsSlider from '../components/ClientsSlider'
-import { Slideshow } from '../components/Slideshow'
+import Slideshow from '../components/Slideshow'
 import booneAndSon from '../public/images/boone_and_son.jpg'
 import booneInField from '../public/images/boone_in_field.jpg'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
@@ -26,7 +26,7 @@ export default async function Index() {
                 <a href='#contact'>Let&apos;s Work Together</a>
               </button>
             </div>
-            <div className='col-span-1 m-auto px-2'>
+            <div className='col-span-1 m-auto h-full w-full px-2'>
               <Slideshow />
             </div>
           </div>
