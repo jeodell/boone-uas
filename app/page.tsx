@@ -17,7 +17,12 @@ export default async function Index() {
           <div className='mx-auto grid max-w-7xl grid-cols-2 px-4 py-16 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex flex-col items-start justify-start px-2'>
               <div className='w-1/2'>
-                <Image src={booneUASLogo} alt='Boone UAS Logo' />
+                <Image
+                  src={booneUASLogo}
+                  alt='Boone UAS Logo'
+                  width={400}
+                  height={400}
+                />
               </div>
               <h2 className='mt-4 text-xl dark:text-zinc-200 sm:text-2xl md:mt-6 md:text-3xl'>
                 Drone Service Provider
@@ -57,7 +62,12 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 xs:divide-x-2 xs:divide-gray-300 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex items-center p-12 xs:p-4 sm:p-8 md:p-16 lg:p-20'>
-              <Image src={booneWithDrone} alt='Owner profile picture' />
+              <Image
+                src={booneWithDrone}
+                alt='Owner profile picture'
+                width={480}
+                height={480}
+              />
             </div>
             <div className='col-span-1 flex flex-col items-start justify-center px-8 py-2 xs:p-8'>
               <h3 className='my-2 text-2xl font-semibold dark:text-zinc-200'>
@@ -73,10 +83,20 @@ export default async function Index() {
               </p>
               <div className='mt-4 flex items-center justify-center bg-white'>
                 <div className='mx-2 w-2/5'>
-                  <Image src={faaSeal} alt='TOP Operator I' />
+                  <Image
+                    src={faaSeal}
+                    alt='TOP Operator I'
+                    width={300}
+                    height={300}
+                  />
                 </div>
                 <div className='mx-2 w-2/5'>
-                  <Image src={topOperator} alt='TOP Operator I' />
+                  <Image
+                    src={topOperator}
+                    alt='TOP Operator I'
+                    width={300}
+                    height={200}
+                  />
                 </div>
               </div>
             </div>
