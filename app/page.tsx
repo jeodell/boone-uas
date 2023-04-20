@@ -1,6 +1,8 @@
 import Image from 'next/image'
 
 import ClientsSlider from '../components/ClientsSlider'
+import ContactForm from '../components/ContactForm'
+import Copyright from '../components/Copyright'
 import Slideshow from '../components/Slideshow'
 import booneAndSon from '../public/images/boone_and_son.jpg'
 import booneInField from '../public/images/boone_in_field.jpg'
@@ -27,9 +29,11 @@ export default async function Index() {
               <h2 className='mt-4 text-xl dark:text-zinc-200 sm:text-2xl md:mt-6 md:text-3xl'>
                 Drone Service Provider
               </h2>
-              <button className='mt-4 bg-gray-900 px-3 py-2 text-xs text-zinc-50 sm:px-4 sm:text-sm md:mt-6 md:text-lg'>
-                <a href='#contact'>Let&apos;s Work Together</a>
-              </button>
+              <a href='#contact'>
+                <button className='mt-4 bg-gray-900 px-3 py-2 text-xs text-zinc-50 hover:bg-gray-700 sm:px-4 sm:text-sm md:mt-6 md:text-lg'>
+                  Let&apos;s Work Together
+                </button>
+              </a>
             </div>
             <div className='col-span-1 m-auto h-full w-full px-2'>
               <Slideshow />
@@ -127,75 +131,7 @@ export default async function Index() {
           </div>
           <div className='mx-auto mb-16 max-w-7xl sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-2 p-8'>
-              <form>
-                <div>
-                  <label
-                    htmlFor='name'
-                    className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
-                  >
-                    Name
-                  </label>
-                  <input
-                    type='email'
-                    id='name'
-                    className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-                    required
-                  />
-                </div>
-                <div className='mt-6'>
-                  <label
-                    htmlFor='email'
-                    className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
-                  >
-                    Email
-                  </label>
-                  <input
-                    type='email'
-                    id='email'
-                    className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-                    required
-                  />
-                </div>
-                <div className='mt-6'>
-                  <label
-                    htmlFor='type-of-service'
-                    className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
-                  >
-                    Type of Service
-                  </label>
-                  <select
-                    name='type-of-service'
-                    id='type-of-service'
-                    className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-                    defaultValue={''}
-                    required
-                  >
-                    <option disabled value=''>
-                      --
-                    </option>
-                    <option value='flight-request'>Flight Request</option>
-                    <option value='training'>Training</option>
-                  </select>
-                </div>
-                <div className='mt-6'>
-                  <label
-                    htmlFor='message'
-                    className='mb-2 block text-sm font-medium text-gray-900 dark:text-zinc-200'
-                  >
-                    How can we help you?
-                  </label>
-                  <textarea
-                    id='message'
-                    className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-                  ></textarea>
-                </div>
-                <button
-                  type='submit'
-                  className='mt-6 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto'
-                >
-                  Submit
-                </button>
-              </form>
+              <ContactForm />
             </div>
             <div className='col-span-1 p-8'>
               <p className='dark:text-zinc-200'>Phone</p>
@@ -204,6 +140,9 @@ export default async function Index() {
               <p className='dark:text-zinc-200'>booneuas@gmail.com</p>
             </div>
           </div>
+        </section>
+        <section id='footer'>
+          <Copyright />
         </section>
       </main>
     </>
