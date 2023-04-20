@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react'
 
+import { sendContactForm } from '../lib/api'
 import { mergeClassNames } from '../util/helper'
 
 export default function ContactForm() {
@@ -10,6 +11,7 @@ export default function ContactForm() {
   const typeOfServiceRef = useRef<HTMLSelectElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setIsError] = useState('')
 
   const [formErrors, setFormErrors] = useState({
     name: '',
@@ -76,6 +78,12 @@ export default function ContactForm() {
     }
 
     if (errors.name || errors.email || errors.typeOfService || errors.message) {
+      setTouched({
+        name: true,
+        email: true,
+        typeOfService: true,
+        message: true,
+      })
       setFormErrors(errors)
       return false
     }
@@ -88,7 +96,26 @@ export default function ContactForm() {
     return true
   }
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  function resetFormFields() {
+    nameRef.current!.value = ''
+    emailRef.current!.value = ''
+    typeOfServiceRef.current!.value = ''
+    messageRef.current!.value = ''
+    setFormErrors({
+      name: '',
+      email: '',
+      typeOfService: '',
+      message: '',
+    })
+    setTouched({
+      name: false,
+      email: false,
+      typeOfService: false,
+      message: false,
+    })
+  }
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     setIsLoading(true)
@@ -105,117 +132,134 @@ export default function ContactForm() {
       return
     }
 
-    console.log(name, email, typeOfService, message)
+    try {
+      await sendContactForm({
+        name,
+        email,
+        typeOfService,
+        message,
+      })
+      resetFormFields()
+    } catch (error) {
+      console.error(error)
+      if (error instanceof Error) setIsError(error.message)
+    }
 
     setIsLoading(false)
   }
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <div>
-        <label
-          htmlFor='name'
-          className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
-        >
-          Name
-        </label>
-        <input
-          type='text'
-          id='name'
-          name='name'
-          className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-          ref={nameRef}
-          onBlur={handleBlur}
-          onChange={handleChange}
-          disabled={isLoading}
-        />
+    <>
+      {error && (
+        <div className='relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700'>
+          <span className='block sm:inline'> {error}</span>
+        </div>
+      )}
+      <form onSubmit={handleFormSubmit}>
+        <div>
+          <label
+            htmlFor='name'
+            className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
+          >
+            Name
+          </label>
+          <input
+            type='text'
+            id='name'
+            name='name'
+            className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
+            ref={nameRef}
+            onBlur={handleBlur}
+            onChange={handleChange}
+            disabled={isLoading}
+          />
 
-        <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-          {touched.name && formErrors.name}
-        </p>
-      </div>
-      <div className='mt-3'>
-        <label
-          htmlFor='email'
-          className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
-        >
-          Email
-        </label>
-        <input
-          type='text'
-          id='email'
-          name='email'
-          className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-          ref={emailRef}
-          onBlur={handleBlur}
-          onChange={handleChange}
+          <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
+            {touched.name && formErrors.name}
+          </p>
+        </div>
+        <div className='mt-3'>
+          <label
+            htmlFor='email'
+            className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
+          >
+            Email
+          </label>
+          <input
+            type='text'
+            id='email'
+            name='email'
+            className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
+            ref={emailRef}
+            onBlur={handleBlur}
+            onChange={handleChange}
+            disabled={isLoading}
+          />
+          <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
+            {touched.email && formErrors.email}
+          </p>
+        </div>
+        <div className='mt-3'>
+          <label
+            htmlFor='type-of-service'
+            className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
+          >
+            Type of Service
+          </label>
+          <select
+            id='type-of-service'
+            name='typeOfService'
+            className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
+            defaultValue={''}
+            ref={typeOfServiceRef}
+            onBlur={handleBlur}
+            onChange={handleChange}
+            disabled={isLoading}
+          >
+            <option disabled value=''>
+              --
+            </option>
+            <option value='flight-request'>Flight Request</option>
+            <option value='training'>Training</option>
+          </select>
+          <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
+            {touched.typeOfService && formErrors.typeOfService}
+          </p>
+        </div>
+        <div className='mt-3'>
+          <label
+            htmlFor='message'
+            className='mb-2 block text-sm font-medium text-gray-900 dark:text-zinc-200'
+          >
+            How can we help you?
+          </label>
+          <textarea
+            id='message'
+            name='message'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
+            rows={4}
+            ref={messageRef}
+            onBlur={handleBlur}
+            onChange={handleChange}
+            disabled={isLoading}
+          ></textarea>
+          <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
+            {touched.message && formErrors.message}
+          </p>
+        </div>
+        <button
+          type='submit'
+          className={mergeClassNames(
+            'mt-2 rounded-lg px-4 py-2 text-center text-xs text-zinc-50 focus:outline-gray-700 sm:text-sm md:mt-4 md:text-base',
+            isLoading
+              ? 'bg-gray-300 hover:bg-gray-300'
+              : 'bg-gray-900 hover:bg-gray-700  ',
+          )}
           disabled={isLoading}
-        />
-        <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-          {touched.email && formErrors.email}
-        </p>
-      </div>
-      <div className='mt-3'>
-        <label
-          htmlFor='type-of-service'
-          className='block text-sm font-medium text-gray-900 dark:text-zinc-200'
         >
-          Type of Service
-        </label>
-        <select
-          id='type-of-service'
-          name='typeOfService'
-          className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-          defaultValue={''}
-          ref={typeOfServiceRef}
-          onBlur={handleBlur}
-          onChange={handleChange}
-          disabled={isLoading}
-        >
-          <option disabled value=''>
-            --
-          </option>
-          <option value='flight-request'>Flight Request</option>
-          <option value='training'>Training</option>
-        </select>
-        <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-          {touched.typeOfService && formErrors.typeOfService}
-        </p>
-      </div>
-      <div className='mt-3'>
-        <label
-          htmlFor='message'
-          className='mb-2 block text-sm font-medium text-gray-900 dark:text-zinc-200'
-        >
-          How can we help you?
-        </label>
-        <textarea
-          id='message'
-          name='message'
-          className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
-          rows={4}
-          ref={messageRef}
-          onBlur={handleBlur}
-          onChange={handleChange}
-          disabled={isLoading}
-        ></textarea>
-        <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-          {touched.message && formErrors.message}
-        </p>
-      </div>
-      <button
-        type='submit'
-        // className='mt-6 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto'
-        className={mergeClassNames(
-          'mt-4 px-3 py-2 text-xs text-zinc-50  sm:px-4 sm:text-sm md:mt-6 md:px-5 md:py-3 md:text-base',
-          isLoading
-            ? 'bg-gray-300 hover:bg-gray-300'
-            : 'bg-gray-900 hover:bg-gray-700',
-        )}
-        disabled={isLoading}
-      >
-        Submit
-      </button>
-    </form>
+          Submit
+        </button>
+      </form>
+    </>
   )
 }
