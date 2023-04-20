@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
-import { renderToStaticMarkup } from 'react-dom/server'
 
 import EmailTemplate from '../../../components/EmailTemplate'
 
@@ -22,11 +21,21 @@ export async function POST(request: Request) {
     )
   }
 
+  const user = process.env.EMAIL
+  const pass = process.env.PASS
+
+  if (!user || !pass) {
+    return NextResponse.json(
+      { message: 'Missing email credentials' },
+      { status: 500 },
+    )
+  }
+
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASS,
+      user,
+      pass,
     },
   })
 
