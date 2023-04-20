@@ -31,7 +31,7 @@ export default async function Index() {
                 Drone Service Provider
               </h2>
               <a href='#contact'>
-                <button className='mt-4 bg-gray-900 px-3 py-2 text-xs text-zinc-50 hover:bg-gray-700 sm:px-4 sm:text-sm md:mt-6 md:text-lg'>
+                <button className='mt-4 bg-gray-900 px-3  py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:mt-6 md:text-lg'>
                   Let&apos;s Work Together
                 </button>
               </a>
@@ -120,7 +120,7 @@ export default async function Index() {
         </section>
         <section id='contact'>
           <div className='bg-gray-300 py-[1px]' />
-          <div className='mx-auto mb-4 mt-16 max-w-7xl sm:px-6 lg:px-16'>
+          <div className='mx-auto mb-4 mt-16 max-w-4xl sm:px-6 lg:px-16'>
             <div className='px-8'>
               <h3 className='text-3xl font-medium dark:text-zinc-200'>
                 Need a drone service?
@@ -130,15 +130,9 @@ export default async function Index() {
               </h3>
             </div>
           </div>
-          <div className='mx-auto mb-16 max-w-7xl sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
-            <div className='col-span-2 p-8'>
+          <div className='mx-auto mb-16 max-w-4xl sm:px-6 lg:px-16'>
+            <div className='p-8'>
               <ContactForm />
-            </div>
-            <div className='col-span-1 p-8'>
-              <p className='dark:text-zinc-200'>Phone</p>
-              <p className='dark:text-zinc-200'>336-403-1811</p>
-              <p className='dark:text-zinc-200'>Email</p>
-              <p className='dark:text-zinc-200'>booneuas@gmail.com</p>
             </div>
           </div>
         </section>
