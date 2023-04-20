@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Image from 'next/image'
 
 import ClientsSlider from '../components/ClientsSlider'
@@ -145,6 +146,7 @@ export default async function Index() {
           <Copyright />
         </section>
       </main>
+      <Analytics />
     </>
   )
 }
