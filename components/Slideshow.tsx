@@ -48,21 +48,18 @@ export default function Slideshow() {
   // const imageIndex = wrap(0, images.length, page)
 
   const prevSlide = () => {
-    console.log('prevSlide')
     const isFirstSlide = currentIndex === 0
     const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1
     setCurrentIndex(newIndex)
   }
 
   const nextSlide = useCallback(() => {
-    console.log('nextSlide')
     const isLastSlide = currentIndex === images.length - 1
     const newIndex = isLastSlide ? 0 : currentIndex + 1
     setCurrentIndex(newIndex)
   }, [currentIndex])
 
   const goToSlide = (slideIndex: SetStateAction<number>) => {
-    console.log('goToSlide')
     setCurrentIndex(slideIndex)
   }
 
