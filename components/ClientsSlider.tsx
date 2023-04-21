@@ -16,49 +16,49 @@ export default function ClientsSlider() {
       <div
         className={`${classes.marquee} flex items-center whitespace-nowrap py-12`}
       >
-        <Image
+        <img
           src={`${big6.src}`}
           className='mx-12 w-40'
           alt='Big 6 Media Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${dronegenuity.src}`}
           className='mx-12 w-40'
           alt='Dronegenuity Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${dronevideos.src}`}
           className='mx-12 w-40'
           alt='Drone Videos Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${flyguys.src}`}
           className='mx-12 w-40'
           alt='Fly Guys Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${frankblum.src}`}
           className='mx-12 w-40'
           alt='Frank Blum Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${giemeroofing.src}`}
           className='mx-12 w-40'
           alt='Gieme Roofing Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${iqcontracting.src}`}
           className='mx-12 w-40'
           alt='IQ Contracting Logo'
@@ -70,49 +70,49 @@ export default function ClientsSlider() {
       <div
         className={`${classes.marquee2} absolute top-0 flex items-center whitespace-nowrap py-12`}
       >
-        <Image
+        <img
           src={`${big6.src}`}
           className='mx-12 w-40'
           alt='Big 6 Media Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${dronegenuity.src}`}
           className='mx-12 w-40'
           alt='Dronegenuity Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${dronevideos.src}`}
           className='mx-12 w-40'
           alt='Drone Videos Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${flyguys.src}`}
           className='mx-12 w-40'
           alt='Fly Guys Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${frankblum.src}`}
           className='mx-12 w-40'
           alt='Frank Blum Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${giemeroofing.src}`}
           className='mx-12 w-40'
           alt='Gieme Roofing Logo'
           width={150}
           height={150}
         />
-        <Image
+        <img
           src={`${iqcontracting.src}`}
           className='mx-12 w-40'
           alt='IQ Contracting Logo'
