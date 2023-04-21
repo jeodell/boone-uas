@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import ClientsSlider from '../components/ClientsSlider'
 import ContactForm from '../components/ContactForm'
-import Copyright from '../components/Copyright'
+import Copyright from '../components/Footer'
 import Slideshow from '../components/Slideshow'
 import booneAndSon from '../public/images/boone_and_son.jpg'
 import booneInField from '../public/images/boone_in_field.jpg'
