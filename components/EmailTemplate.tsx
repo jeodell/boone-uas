@@ -11,16 +11,16 @@ export default function EmailTemplate({
 }) {
   return (
     <>
-      <h1 className='mb-2 text-xl'>New Contact Request</h1>
-      <div className='border-[0.5px] border-gray-400 p-4'>
-        <h1 className='text-lg'>Name</h1>
-        <h2 className='text-base'>{name}</h2>
-        <h1 className='text-lg'>Email</h1>
-        <h2 className='text-base'>{email}</h2>
-        <h1 className='text-lg'>Type of Service</h1>
-        <h2 className='text-base'>{typeOfService}</h2>
-        <h1 className='text-lg'>Message</h1>
-        <h2 className='text-base'>{message}</h2>
+      <h2 className='mb-2 text-xl'>New Contact Form Submission</h2>
+      <div className='border-1 border-gray-400 p-4'>
+        <h3 className='text-lg'>Name</h3>
+        <p className='text-base'>{name}</p>
+        <h3 className='text-lg'>Email</h3>
+        <p className='text-base'>{email}</p>
+        <h3 className='text-lg'>Type of Service</h3>
+        <p className='text-base'>{typeOfService}</p>
+        <h3 className='text-lg'>Message</h3>
+        <p className='text-base'>{message}</p>
       </div>
     </>
   )

@@ -2,6 +2,9 @@
 
 import { useRef, useState } from 'react'
 
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 import { sendContactForm } from '../lib/api'
 import { mergeClassNames } from '../util/helper'
 
@@ -96,6 +99,22 @@ export default function ContactForm() {
     return true
   }
 
+  function showErrorToast(errorMessage: string) {
+    toast.error(errorMessage, {
+      position: 'bottom-center',
+      autoClose: 5000,
+      hideProgressBar: true,
+    })
+  }
+
+  function showSuccessToast() {
+    toast.success('Email sent successfully!', {
+      position: 'bottom-center',
+      autoClose: 5000,
+      hideProgressBar: true,
+    })
+  }
+
   function resetFormFields() {
     nameRef.current!.value = ''
     emailRef.current!.value = ''
@@ -127,22 +146,23 @@ export default function ContactForm() {
 
     const isValidForm = checkIfFormIsValid(name, email, typeOfService, message)
 
-    if (!isValidForm) {
-      setIsLoading(false)
-      return
-    }
-
-    try {
-      await sendContactForm({
-        name,
-        email,
-        typeOfService,
-        message,
-      })
-      resetFormFields()
-    } catch (error) {
-      console.error(error)
-      if (error instanceof Error) setIsError(error.message)
+    if (isValidForm) {
+      try {
+        await sendContactForm({
+          name,
+          email,
+          typeOfService,
+          message,
+        })
+        resetFormFields()
+        showSuccessToast()
+      } catch (error) {
+        console.error(error)
+        if (error instanceof Error) {
+          setIsError(error.message)
+          showErrorToast(error.message)
+        }
+      }
     }
 
     setIsLoading(false)
@@ -150,11 +170,6 @@ export default function ContactForm() {
 
   return (
     <>
-      {error && (
-        <div className='relative rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700'>
-          <span className='block sm:inline'> {error}</span>
-        </div>
-      )}
       <form onSubmit={handleFormSubmit}>
         <div>
           <label
@@ -260,6 +275,7 @@ export default function ContactForm() {
           Submit
         </button>
       </form>
+      <ToastContainer />
     </>
   )
 }
