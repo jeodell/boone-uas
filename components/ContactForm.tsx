@@ -99,12 +99,15 @@ export default function ContactForm() {
     return true
   }
 
-  function showErrorToast(errorMessage: string) {
-    toast.error(errorMessage, {
-      position: 'bottom-center',
-      autoClose: 5000,
-      hideProgressBar: true,
-    })
+  function showErrorToast() {
+    toast.error(
+      'Contact form failed to send. Please email us directly at booneuas@gmail.com',
+      {
+        position: 'bottom-center',
+        autoClose: 10000,
+        hideProgressBar: true,
+      },
+    )
   }
 
   function showSuccessToast() {
@@ -160,7 +163,7 @@ export default function ContactForm() {
         console.error(error)
         if (error instanceof Error) {
           setIsError(error.message)
-          showErrorToast(error.message)
+          showErrorToast()
         }
       }
     }
