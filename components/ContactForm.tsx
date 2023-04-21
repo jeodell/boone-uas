@@ -23,23 +23,7 @@ export default function ContactForm() {
     message: '',
   })
 
-  const [touched, setTouched] = useState({
-    name: false,
-    email: false,
-    typeOfService: false,
-    message: false,
-  })
-
   const emailRegex = /\S+@\S+\.\S+/
-
-  function handleBlur(
-    e: React.FocusEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) {
-    const { name } = e.target
-    setTouched((prev) => ({ ...prev, [name]: true }))
-  }
 
   function handleChange(
     e: React.ChangeEvent<
@@ -48,7 +32,6 @@ export default function ContactForm() {
   ) {
     const { name } = e.target
     setFormErrors((prev) => ({ ...prev, [name]: '' }))
-    setTouched((prev) => ({ ...prev, [name]: true }))
   }
 
   function checkIfFormIsValid(
@@ -81,12 +64,6 @@ export default function ContactForm() {
     }
 
     if (errors.name || errors.email || errors.typeOfService || errors.message) {
-      setTouched({
-        name: true,
-        email: true,
-        typeOfService: true,
-        message: true,
-      })
       setFormErrors(errors)
       return false
     }
@@ -128,12 +105,6 @@ export default function ContactForm() {
       email: '',
       typeOfService: '',
       message: '',
-    })
-    setTouched({
-      name: false,
-      email: false,
-      typeOfService: false,
-      message: false,
     })
   }
 
@@ -187,13 +158,12 @@ export default function ContactForm() {
             name='name'
             className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
             ref={nameRef}
-            onBlur={handleBlur}
             onChange={handleChange}
             disabled={isLoading}
           />
 
           <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-            {touched.name && formErrors.name}
+            {formErrors.name}
           </p>
         </div>
         <div className='mt-3'>
@@ -209,12 +179,11 @@ export default function ContactForm() {
             name='email'
             className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
             ref={emailRef}
-            onBlur={handleBlur}
             onChange={handleChange}
             disabled={isLoading}
           />
           <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-            {touched.email && formErrors.email}
+            {formErrors.email}
           </p>
         </div>
         <div className='mt-3'>
@@ -230,7 +199,6 @@ export default function ContactForm() {
             className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
             defaultValue={''}
             ref={typeOfServiceRef}
-            onBlur={handleBlur}
             onChange={handleChange}
             disabled={isLoading}
           >
@@ -241,7 +209,7 @@ export default function ContactForm() {
             <option value='training'>Training</option>
           </select>
           <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-            {touched.typeOfService && formErrors.typeOfService}
+            {formErrors.typeOfService}
           </p>
         </div>
         <div className='mt-3'>
@@ -257,12 +225,11 @@ export default function ContactForm() {
             className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
             rows={4}
             ref={messageRef}
-            onBlur={handleBlur}
             onChange={handleChange}
             disabled={isLoading}
           ></textarea>
           <p className='mt-1 min-h-[1.3rem] text-sm text-red-600'>
-            {touched.message && formErrors.message}
+            {formErrors.message}
           </p>
         </div>
         <button
