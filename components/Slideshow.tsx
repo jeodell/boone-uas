@@ -20,16 +20,7 @@ import overheadSolar from '../public/images/overhead_solar.jpg'
 import overheadSolarAngled from '../public/images/overhead_solar_angled.jpg'
 import overheadSolarField from '../public/images/overhead_solar_field.jpg'
 
-const images = [droneAutumn, droneNcMutualLife, droneStevensCenter, droneTrain, droneWinstonSalem, overheadApartmentsPool, overheadBeach, overheadCows, overheadHeartLake, overheadKayaks, overheadOcean, overheadSolar, overheadSolarAngled, overheadSolarField]
-
-const shuffleArray = (array: StaticImageData[]) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
-
-shuffleArray(images)
+const images = [droneWinstonSalem, droneTrain, overheadSolar, droneAutumn, overheadHeartLake, overheadOcean, overheadSolarAngled, overheadBeach, droneNcMutualLife, overheadCows, droneStevensCenter, overheadKayaks, overheadApartmentsPool, overheadSolarField]
 
 // const variants = {
 //   enter: (direction: number) => {
