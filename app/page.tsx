@@ -79,7 +79,7 @@ export default async function Index() {
                 <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Training</p>
                 <div className='flex items-start'>
                   <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
-                  <p className='dark:text-zinc-200'>Part 107 FAA Training</p>
+                  <p className='dark:text-zinc-200'>FAA Part 107</p>
                 </div>
                 <div className='flex items-start'>
                   <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
