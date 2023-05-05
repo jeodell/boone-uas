@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 
 import {
-  Inter,
+  // Inter,
   Roboto_Mono,
-  Poppins,
-  Montserrat,
+  // Poppins,
+  // Montserrat,
   Barlow,
-  Josefin_Sans,
+  // Josefin_Sans,
 } from 'next/font/google'
 
 import '../styles/globals.css'
@@ -21,11 +21,11 @@ export const metadata = {
   },
 }
 
-const inter = Inter({
-  variable: '--font-inter',
-  display: 'swap',
-  subsets: ['latin'],
-})
+// const inter = Inter({
+//   variable: '--font-inter',
+//   display: 'swap',
+//   subsets: ['latin'],
+// })
 
 const roboto_mono = Roboto_Mono({
   variable: '--font-roboto-mono',
@@ -33,32 +33,33 @@ const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
 })
 
-const poppins = Poppins({
-  variable: '--font-poppins',
-  display: 'swap',
-  weight: '400',
-  subsets: ['latin'],
-})
+// const poppins = Poppins({
+//   variable: '--font-poppins',
+//   display: 'swap',
+//   weight: '400',
+//   subsets: ['latin'],
+// })
 
-const montserrat = Montserrat({
-  variable: '--font-montserrat',
-  display: 'swap',
-  weight: '400',
-  subsets: ['latin'],
-})
+// const montserrat = Montserrat({
+//   variable: '--font-montserrat',
+//   display: 'swap',
+//   weight: '400',
+//   subsets: ['latin'],
+// })
 
 const barlow = Barlow({
   variable: '--font-barlow',
   display: 'swap',
   weight: '400',
+  style: 'normal',
   subsets: ['latin'],
 })
 
-const josefin_sans = Josefin_Sans({
-  variable: '--font-josefin-sans',
-  display: 'swap',
-  subsets: ['latin'],
-})
+// const josefin_sans = Josefin_Sans({
+//   variable: '--font-josefin-sans',
+//   display: 'swap',
+//   subsets: ['latin'],
+// })
 
 export default async function RootLayout({
   children,
@@ -68,7 +69,7 @@ export default async function RootLayout({
   return (
     <html
       lang='en'
-      className={`${inter.variable} ${roboto_mono.variable} ${poppins.variable} ${montserrat.variable} ${barlow.variable} ${josefin_sans.variable}`}
+      className={`${roboto_mono.variable} ${barlow.variable}`}
     >
       <body>
         <Navbar />
