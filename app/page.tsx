@@ -47,46 +47,46 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-1 flex items-center justify-center md:block md:self-center md:pl-8'>
-              <h3 className='text-lg font-semibold dark:text-zinc-200 md:w-[4ch]'>
+              <h3 className='text-2xl md:text-lg font-medium md:font-semibold dark:text-zinc-200 md:w-[4ch] mb-2 md:mb-0'>
                 Our Services
               </h3>
             </div>
             <div className='grid grid-cols-2 pt-4 md:col-span-2 md:pt-0'>
               <div className='col-span-1 px-1 mx-auto md:mx-0'>
                 <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Drone Flights</p>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>Real Estate Photography</p>
                 </div>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>Solar Inspection Services</p>
                 </div>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>Construction Progression</p>
                 </div>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>3D Modeling</p>
                 </div>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>Thermal Imaging</p>
                 </div>
               </div>
               <div className='col-span-1 px-1 mx-auto md:mx-0'>
                 <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Training</p>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>Part 107 FAA Training</p>
                 </div>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>Drone Flying</p>
                 </div>
-                <div className='flex items-center'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>UAS Consulting</p>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default async function Index() {
         <section id='clients'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 sm:px-6 lg:px-16'>
-            <h3 className='text-center text-3xl font-medium dark:text-zinc-200'>
+            <h3 className='text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
               Our Clients
             </h3>
             <div className='flex items-center justify-center px-8 lg:px-0'>
