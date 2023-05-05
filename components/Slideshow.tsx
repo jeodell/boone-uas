@@ -3,12 +3,33 @@
 import { SetStateAction, useCallback, useEffect, useState } from 'react'
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-import train from '../public/images/train.jpg'
-import winstonSalem from '../public/images/winston_salem.jpg'
+import droneAutumn from '../public/images/drone_autumn.jpg'
+import droneNcMutualLife from '../public/images/drone_ncmutuallife.jpg'
+import droneStevensCenter from '../public/images/drone_stevens_center.jpg'
+import droneTrain from '../public/images/drone_train.jpg'
+import droneWinstonSalem from '../public/images/drone_winston_salem.jpg'
+import overheadApartmentsPool from '../public/images/overhead_apartments_pool.jpg'
+import overheadBeach from '../public/images/overhead_beach.jpg'
+import overheadCows from '../public/images/overhead_cows.jpg'
+import overheadHeartLake from '../public/images/overhead_heart_lake.jpg'
+import overheadKayaks from '../public/images/overhead_kayaks.jpg'
+import overheadOcean from '../public/images/overhead_ocean.jpg'
+import overheadSolar from '../public/images/overhead_solar.jpg'
+import overheadSolarAngled from '../public/images/overhead_solar_angled.jpg'
+import overheadSolarField from '../public/images/overhead_solar_field.jpg'
 
-const images = [winstonSalem, train]
+const images = [droneAutumn, droneNcMutualLife, droneStevensCenter, droneTrain, droneWinstonSalem, overheadApartmentsPool, overheadBeach, overheadCows, overheadHeartLake, overheadKayaks, overheadOcean, overheadSolar, overheadSolarAngled, overheadSolarField]
+
+const shuffleArray = (array: StaticImageData[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffleArray(images)
 
 // const variants = {
 //   enter: (direction: number) => {
@@ -76,9 +97,8 @@ export default function Slideshow() {
         return (
           <div
             key={index}
-            className={`absolute left-0 top-0 h-full w-full transition-opacity duration-1000 ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute left-0 top-0 h-full w-full transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             <Image
               className='h-full object-contain'
