@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from '@heroicons/react/24/outline'
 import { Analytics } from '@vercel/analytics/react'
 import Image from 'next/image'
 
@@ -30,6 +31,7 @@ export default async function Index() {
               <h2 className='mt-4 text-xl dark:text-zinc-200 sm:text-2xl md:mt-6 md:text-3xl'>
                 Drone Service Provider
               </h2>
+              <h3 className='mt-1 text-base dark:text-zinc-200 md:mt-2 md:text-xl font-normal'>Unmanned Aerial Systems</h3>
               <a href='#contact'>
                 <button className='mt-4 bg-gray-900 px-3  py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:mt-6 md:text-lg'>
                   Let&apos;s Work Together
@@ -45,20 +47,48 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-1 flex items-center justify-center md:block md:self-center md:pl-8'>
-              <h3 className='text-xl font-bold dark:text-zinc-200 md:w-[4ch] md:text-base'>
+              <h3 className='text-lg font-semibold dark:text-zinc-200 md:w-[4ch]'>
                 Our Services
               </h3>
             </div>
             <div className='grid grid-cols-2 pt-4 md:col-span-2 md:pt-0'>
-              <div className='col-span-1 px-1'>
-                <p className='dark:text-zinc-200'>Real Estate Photography</p>
-                <p className='dark:text-zinc-200'>Solar Inspection Services</p>
-                <p className='dark:text-zinc-200'>Construction Progression</p>
+              <div className='col-span-1 px-1 mx-auto md:mx-0'>
+                <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Drone Flights</p>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>Real Estate Photography</p>
+                </div>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>Solar Inspection Services</p>
+                </div>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>Construction Progression</p>
+                </div>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>3D Modeling</p>
+                </div>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>Thermal Imaging</p>
+                </div>
               </div>
-              <div className='col-span-1 px-1'>
-                <p className='dark:text-zinc-200'>3D Modeling</p>
-                <p className='dark:text-zinc-200'>Thermal Imaging</p>
-                <p className='dark:text-zinc-200'>Part 107 FAA Training</p>
+              <div className='col-span-1 px-1 mx-auto md:mx-0'>
+                <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Training</p>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>Part 107 FAA Training</p>
+                </div>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>Drone Flying</p>
+                </div>
+                <div className='flex items-center'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700' />
+                  <p className='dark:text-zinc-200'>UAS Consulting</p>
+                </div>
               </div>
             </div>
           </div>
