@@ -46,7 +46,7 @@ export default async function Index() {
               <h4 className='md:text-xl mr-2 font-bold'>Need a drone?</h4>
               <a className='group flex justify-center items-center' href='#contact'>
                 {/* <p className='text-xs sm:text-sm md:text-xl underline underline-offset-[6px] hover:underline-offset-4 decoration-gray-500 hover:decoration-gray-700 transition-all duration-100 ease-linear'>Get started today.</p> */}
-                <p className='text-xs sm:text-sm md:text-xl underline underline-offset-[6px] decoration-gray-700 hover:no-underline bg-[length:100%_2px] bg-left-bottom hover:bg-left-bottom bg-gradient-to-r hover:bg-gradient-to-r hover:from-red-500 hover:to-rose-900 bg-no-repeat group-hover:bg-[length:100%_2px]'>Get started today.</p>
+                <p className='md:text-xl underline underline-offset-[6px] decoration-gray-700 hover:no-underline bg-[length:100%_2px] bg-left-bottom hover:bg-left-bottom bg-gradient-to-r hover:bg-gradient-to-r hover:from-red-500 hover:to-rose-900 bg-no-repeat group-hover:bg-[length:100%_2px]'>Get started today.</p>
                 {/* <button className='bg-gray-900 px-3 py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:text-lg'>
                   Get Started Today
                 </button> */}
