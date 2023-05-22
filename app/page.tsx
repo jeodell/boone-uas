@@ -28,18 +28,29 @@ export default async function Index() {
                   height={400}
                 />
               </div>
-              <h2 className='mt-4 text-xl dark:text-zinc-200 sm:text-2xl md:mt-6 md:text-3xl'>
+              <h2 className='mt-6 text-xl dark:text-zinc-200 sm:text-2xl md:mt-8 md:text-4xl'>
                 Drone Service Provider
               </h2>
-              <h3 className='mt-1 text-base dark:text-zinc-200 md:mt-2 md:text-xl font-normal'>Unmanned Aerial Systems</h3>
+              <h3 className='mt-2 text-base italic dark:text-zinc-200 md:mt-4 md:text-2xl font-normal'>Unmanned Aerial Systems</h3>
+              {/* <h4 className='mt-6 md:text-xl'>Need a drone?</h4>
               <a href='#contact'>
-                <button className='mt-4 bg-gray-900 px-3  py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:mt-6 md:text-lg'>
-                  Let&apos;s Work Together
+                <button className='mt-2 bg-gray-900 px-3 py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:text-lg'>
+                  Get Started Today
                 </button>
-              </a>
+              </a> */}
             </div>
             <div className='col-span-1 m-auto h-full w-full px-2'>
               <Slideshow />
+            </div>
+            <div className="col-span-2 flex justify-center items-center mt-24">
+              <h4 className='md:text-xl mr-2 font-bold'>Need a drone?</h4>
+              <a className='group flex justify-center items-center' href='#contact'>
+                {/* <p className='text-xs sm:text-sm md:text-xl underline underline-offset-[6px] hover:underline-offset-4 decoration-gray-500 hover:decoration-gray-700 transition-all duration-100 ease-linear'>Get started today.</p> */}
+                <p className='text-xs sm:text-sm md:text-xl underline underline-offset-[6px] decoration-gray-700 hover:no-underline bg-[length:100%_2px] bg-left-bottom hover:bg-left-bottom bg-gradient-to-r hover:bg-gradient-to-r hover:from-red-500 hover:to-rose-900 bg-no-repeat group-hover:bg-[length:100%_2px]'>Get started today.</p>
+                {/* <button className='bg-gray-900 px-3 py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:text-lg'>
+                  Get Started Today
+                </button> */}
+              </a>
             </div>
           </div>
         </section>
@@ -153,10 +164,7 @@ export default async function Index() {
           <div className='mx-auto mb-4 mt-16 max-w-4xl sm:px-6 lg:px-16'>
             <div className='px-8'>
               <h3 className='text-3xl font-medium dark:text-zinc-200'>
-                Need a drone service?
-              </h3>
-              <h3 className='text-3xl font-medium dark:text-zinc-200'>
-                Inquire here.
+                Let&apos;s Work Together
               </h3>
             </div>
           </div>
