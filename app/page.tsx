@@ -12,6 +12,10 @@ import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import booneWithDrone from '../public/images/boone_with_drone.jpg'
 import faaSeal from '../public/images/faa_seal.jpg'
 import topOperator from '../public/images/top_operator.png'
+import trainingPlatformsDji from '../public/images/training_platforms_dji.png'
+import trainingPlatformsParrot from '../public/images/training_platforms_parrot.png'
+import trainingPlatformSkydio from '../public/images/training_platforms_skydio.png'
+import trainingPlatformsWingtra from '../public/images/training_platforms_wingtra.png'
 
 export default async function Index() {
   return (
@@ -58,7 +62,7 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-1 flex items-center justify-center md:block md:self-center md:pl-8'>
-              <h3 className='text-2xl md:text-lg font-medium md:font-semibold dark:text-zinc-200 md:w-[4ch] mb-2 md:mb-0'>
+              <h3 className='text-2xl md:text-3xl font-medium dark:text-zinc-200 md:w-[4ch] mb-2 md:mb-0'>
                 Our Services
               </h3>
             </div>
@@ -100,6 +104,20 @@ export default async function Index() {
                   <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>UAS Consulting</p>
                 </div>
+                <div className="grid grid-cols-2 w-32 grid-rows-2 gap-2 mt-2">
+                  <div className='row-span-1 col-span-1 flex justify-center items-center'>
+                    <Image src={trainingPlatformSkydio} alt='Skydio Logo' width={64} />
+                  </div>
+                  <div className='row-span-1 col-span-1 flex justify-center items-center'>
+                    <Image src={trainingPlatformsDji} alt='DJI Logo' width={40} />
+                  </div>
+                  <div className="row-span-1 col-span-1 flex justify-center items-center bg-transparent">
+                    <Image src={trainingPlatformsParrot} alt='Parrot Logo' width={64} />
+                  </div>
+                  <div className='row-span-1 col-span-1 flex justify-center items-center'>
+                    <Image src={trainingPlatformsWingtra} alt='Wingtra Logo' width={64} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -108,12 +126,17 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 xs:divide-x-2 xs:divide-gray-300 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex items-center p-12 xs:p-4 sm:p-8 md:p-16 lg:p-20'>
-              <Image
-                src={booneWithDrone}
-                alt='Owner profile picture'
-                width={480}
-                height={480}
-              />
+              <div>
+                {/* <div className="flex gap-2 mb-2">
+                  Drone Lineup Here
+                </div> */}
+                <Image
+                  src={booneWithDrone}
+                  alt='Owner profile picture'
+                  width={480}
+                  height={480}
+                />
+              </div>
             </div>
             <div className='col-span-1 flex flex-col items-start justify-center px-8 py-2 xs:p-8'>
               <h3 className='my-2 text-2xl font-semibold dark:text-zinc-200'>
