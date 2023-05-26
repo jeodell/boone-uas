@@ -46,7 +46,7 @@ export default async function Index() {
             <div className='col-span-1 m-auto h-full w-full px-2'>
               <Slideshow />
             </div>
-            <div className="col-span-2 flex justify-center items-center mt-24">
+            <div className="col-span-2 flex justify-center items-center mt-12 md:mt-24">
               <h4 className='md:text-xl mr-2 font-bold'>Need a drone?</h4>
               <a className='group flex justify-center items-center' href='#contact'>
                 {/* <p className='text-xs sm:text-sm md:text-xl underline underline-offset-[6px] hover:underline-offset-4 decoration-gray-500 hover:decoration-gray-700 transition-all duration-100 ease-linear'>Get started today.</p> */}
