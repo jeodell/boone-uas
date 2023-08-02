@@ -6,8 +6,7 @@ import ClientsSlider from '../components/ClientsSlider'
 import ContactForm from '../components/ContactForm'
 import Copyright from '../components/Footer'
 import Slideshow from '../components/Slideshow'
-import booneAndSon from '../public/images/boone_and_son.jpg'
-import booneInField from '../public/images/boone_in_field.jpg'
+import { Video } from '../components/Video';
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import booneWithDrone from '../public/images/boone_with_drone.jpg'
 import droneLineup from '../public/images/drone_lineup.png'
@@ -45,12 +44,6 @@ export default async function Index() {
                   height={100}
                 />
               </div>
-              {/* <h4 className='mt-6 md:text-xl'>Need a drone?</h4>
-              <a href='#contact'>
-                <button className='mt-2 bg-gray-900 px-3 py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:text-lg'>
-                  Get Started Today
-                </button>
-              </a> */}
             </div>
             <div className='col-span-1 m-auto h-full w-full px-2'>
               <Slideshow />
@@ -60,11 +53,7 @@ export default async function Index() {
               <div className='mt-12 flex items-center justify-center'>
                 <h4 className='md:text-xl mr-2 font-bold'>Need a drone?</h4>
                 <a className='group flex justify-center items-center' href='#contact'>
-                  {/* <p className='text-xs sm:text-sm md:text-xl underline underline-offset-[6px] hover:underline-offset-4 decoration-gray-500 hover:decoration-gray-700 transition-all duration-100 ease-linear'>Get started today.</p> */}
                   <p className='md:text-xl underline underline-offset-[6px] decoration-gray-700 hover:no-underline bg-[length:100%_2px] bg-left-bottom hover:bg-left-bottom bg-gradient-to-r hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-900 bg-no-repeat group-hover:bg-[length:100%_2px]'>Get started today.</p>
-                  {/* <button className='bg-gray-900 px-3 py-2 text-xs text-zinc-50 hover:bg-gray-700 focus:outline-gray-700 sm:px-4 sm:text-sm md:text-lg'>
-                  Get Started Today
-                </button> */}
                 </a>
               </div>
             </div>
@@ -101,6 +90,10 @@ export default async function Index() {
                   <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
                   <p className='dark:text-zinc-200'>Thermal Imaging</p>
                 </div>
+                <div className='flex items-start'>
+                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <p className='dark:text-zinc-200'>Videography</p>
+                </div>
               </div>
               <div className='col-span-1 px-1 mx-auto md:mx-0'>
                 <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Training</p>
@@ -134,14 +127,32 @@ export default async function Index() {
             </div>
           </div>
         </section>
+        <section id="videos">
+          <div className='bg-gray-300 py-[1px]' />
+          <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 sm:px-6 lg:px-16 gap-x-4'>
+            <div className='col-span-1'>
+              <h3 className='text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
+                Industrial
+              </h3>
+              <div className='mt-4 h-full w-full'>
+                <Video url='https://vimeo.com/850003200?share=copy' />
+              </div>
+            </div>
+            <div className='col-span-1'>
+              <h3 className='text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
+                Creative
+              </h3>
+              <div className='mt-4 h-full w-full'>
+                <Video url='https://vimeo.com/850009575?share=copy' />
+              </div>
+            </div>
+          </div>
+        </section>
         <section id='about'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 xs:divide-x-2 xs:divide-gray-300 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex items-center p-12 xs:p-4 sm:p-8 md:p-16 lg:p-20'>
               <div>
-                {/* <div className="flex gap-2 mb-2">
-                  Drone Lineup Here
-                </div> */}
                 <Image
                   src={booneWithDrone}
                   alt='Owner profile picture'
