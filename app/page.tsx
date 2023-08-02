@@ -129,21 +129,23 @@ export default async function Index() {
         </section>
         <section id="videos">
           <div className='bg-gray-300 py-[1px]' />
-          <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 sm:px-6 lg:px-16 gap-x-4'>
+          <div className='mx-auto max-w-7xl py-16 sm:grid sm:grid-cols-2 sm:px-6 lg:px-16 gap-x-4'>
             <div className='col-span-1'>
               <h3 className='text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
                 Industrial
               </h3>
-              <div className='mt-4 h-full w-full'>
-                <Video url='https://vimeo.com/850003200?share=copy' />
+              <div className='mt-6 sm:mt-8 flex justify-center items-center w-full'>
+                <Video videoId='850003200' />
               </div>
             </div>
             <div className='col-span-1'>
-              <h3 className='text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
+              <h3 className='mt-16 sm:mt-0 text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
                 Creative
               </h3>
-              <div className='mt-4 h-full w-full'>
-                <Video url='https://vimeo.com/850009575?share=copy' />
+              <div className='mt-6 sm:mt-8 flex justify-center items-center w-full'>
+                <Video
+                  videoId='850009575'
+                />
               </div>
             </div>
           </div>

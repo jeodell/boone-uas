@@ -1,19 +1,11 @@
-import ReactPlayer from 'react-player'
+'use client'
 
 type VideoProps = {
-  url: string
+  videoId: string
 }
 
 export const Video = (props: VideoProps) => {
   return (
-    <ReactPlayer
-      url={props.url}
-      playing
-      muted
-      loop
-      controls={false}
-      width="100%" // Set the width as needed
-      height="100%" // Set the height as needed
-    />
+    <iframe src={`https://player.vimeo.com/video/${props.videoId}?h=4d237d11ac&loop=1&autoplay=1&autopause=0&byline=0&title=0&muted=1&controls=0`} frameBorder="0" width="640" height="250" allow="autoplay" allowFullScreen></iframe>
   )
 }
