@@ -6,7 +6,7 @@ import ClientsSlider from '../components/ClientsSlider'
 import ContactForm from '../components/ContactForm'
 import Copyright from '../components/Footer'
 import Slideshow from '../components/Slideshow'
-import { Video } from '../components/Video';
+import { Video } from '../components/Video'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import booneWithDrone from '../public/images/boone_with_drone.jpg'
 import droneLineup from '../public/images/drone_lineup.png'
@@ -32,11 +32,13 @@ export default async function Index() {
                   height={400}
                 />
               </div>
-              <h2 className='mt-2 md:mt-4 lg:mt-6 ml-1 xs:ml-[0.5rem] sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 text-lg xs:text-xl dark:text-zinc-200 sm:text-2xl md:text-3xl'>
+              <h2 className='ml-1 mt-2 text-lg dark:text-zinc-200 xs:ml-[0.5rem] xs:text-xl sm:ml-3 sm:text-2xl md:ml-4 md:mt-4 md:text-3xl lg:ml-5 lg:mt-6 xl:ml-6'>
                 Drone Service Provider
               </h2>
-              <h3 className='mt-2 ml-1 xs:ml-[0.5rem] sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 text-sm xs:text-base italic dark:text-zinc-200 md:mt-4 md:text-2xl font-normal'>Unmanned Aerial Systems</h3>
-              <div className='mt-4 md:mt-6 lg:mt-8 mx-1 xs:mx-[0.5rem] sm:mx-3 md:mx-4 lg:mx-5 xl:mx-6'>
+              <h3 className='ml-1 mt-2 text-sm font-normal italic dark:text-zinc-200 xs:ml-[0.5rem] xs:text-base sm:ml-3 md:ml-4 md:mt-4 md:text-2xl lg:ml-5 xl:ml-6'>
+                Unmanned Aerial Systems
+              </h3>
+              <div className='mx-1 mt-4 xs:mx-[0.5rem] sm:mx-3 md:mx-4 md:mt-6 lg:mx-5 lg:mt-8 xl:mx-6'>
                 <Image
                   src={droneLineup}
                   alt='Drone Lineup'
@@ -48,12 +50,19 @@ export default async function Index() {
             <div className='col-span-1 m-auto h-full w-full px-2'>
               <Slideshow />
             </div>
-            <div className="col-span-2 flex flex-col justify-center items-center mt-12 md:mt-24">
-              <h3 className='tracking-wide text-lg xs:text-xl sm:text-2xl md:text-3xl text-center'>We fly. We film. We deliver.</h3>
+            <div className='col-span-2 mt-12 flex flex-col items-center justify-center md:mt-24'>
+              <h3 className='text-center text-lg tracking-wide xs:text-xl sm:text-2xl md:text-3xl'>
+                We fly. We film. We deliver.
+              </h3>
               <div className='mt-12 flex items-center justify-center'>
-                <h4 className='md:text-xl mr-2 font-bold'>Need a drone?</h4>
-                <a className='group flex justify-center items-center' href='#contact'>
-                  <p className='md:text-xl underline underline-offset-[6px] decoration-gray-700 hover:no-underline bg-[length:100%_2px] bg-left-bottom hover:bg-left-bottom bg-gradient-to-r hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-900 bg-no-repeat group-hover:bg-[length:100%_2px]'>Get started today.</p>
+                <h4 className='mr-2 font-bold md:text-xl'>Need a drone?</h4>
+                <a
+                  className='group flex items-center justify-center'
+                  href='#contact'
+                >
+                  <p className='bg-gradient-to-r bg-[length:100%_2px] bg-left-bottom bg-no-repeat underline decoration-gray-700 underline-offset-[6px] hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-900 hover:bg-left-bottom hover:no-underline group-hover:bg-[length:100%_2px] md:text-xl'>
+                    Get started today.
+                  </p>
                 </a>
               </div>
             </div>
@@ -63,89 +72,109 @@ export default async function Index() {
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
             <div className='col-span-1 flex items-center justify-center md:block md:self-center md:pl-8'>
-              <h3 className='text-2xl md:text-3xl font-medium dark:text-zinc-200 md:w-[4ch] mb-2 md:mb-0'>
+              <h3 className='mb-2 text-2xl font-medium dark:text-zinc-200 md:mb-0 md:w-[4ch] md:text-3xl'>
                 Our Services
               </h3>
             </div>
             <div className='grid grid-cols-2 pt-4 md:col-span-2 md:pt-0'>
-              <div className='col-span-1 px-1 mx-auto md:mx-0'>
-                <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Drone Flights</p>
+              <div className='col-span-1 mx-auto px-1 md:mx-0'>
+                <p className='mb-1 text-lg font-semibold dark:text-zinc-200'>
+                  Drone Flights
+                </p>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>Real Estate Photography</p>
                 </div>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
-                  <p className='dark:text-zinc-200'>Solar Inspection Services</p>
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
+                  <p className='dark:text-zinc-200'>
+                    Solar Inspection Services
+                  </p>
                 </div>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>Construction Progression</p>
                 </div>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>3D Modeling</p>
                 </div>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>Thermal Imaging</p>
                 </div>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>Videography</p>
                 </div>
               </div>
-              <div className='col-span-1 px-1 mx-auto md:mx-0'>
-                <p className='dark:text-zinc-200 text-lg font-semibold mb-1'>Training</p>
+              <div className='col-span-1 mx-auto px-1 md:mx-0'>
+                <p className='mb-1 text-lg font-semibold dark:text-zinc-200'>
+                  Training
+                </p>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>FAA Part 107</p>
                 </div>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>Drone Flying</p>
                 </div>
                 <div className='flex items-start'>
-                  <ChevronRightIcon className='h-3 w-3 mr-1 text-gray-700 mt-2' />
+                  <ChevronRightIcon className='mr-1 mt-2 h-3 w-3 text-gray-700' />
                   <p className='dark:text-zinc-200'>UAS Consulting</p>
                 </div>
-                <div className="grid grid-cols-2 w-32 grid-rows-2 gap-2 mt-2">
-                  <div className="row-span-1 col-span-1 flex justify-center items-center bg-transparent">
-                    <Image src={trainingPlatformsParrot} alt='Parrot Logo' width={64} />
+                <div className='mt-2 grid w-32 grid-cols-2 grid-rows-2 gap-2'>
+                  <div className='col-span-1 row-span-1 flex items-center justify-center bg-transparent'>
+                    <Image
+                      src={trainingPlatformsParrot}
+                      alt='Parrot Logo'
+                      width={64}
+                    />
                   </div>
-                  <div className='row-span-1 col-span-1 flex justify-center items-center'>
-                    <Image src={trainingPlatformsWingtra} alt='Wingtra Logo' width={64} />
+                  <div className='col-span-1 row-span-1 flex items-center justify-center'>
+                    <Image
+                      src={trainingPlatformsWingtra}
+                      alt='Wingtra Logo'
+                      width={64}
+                    />
                   </div>
-                  <div className='row-span-1 col-span-1 flex justify-center items-center'>
-                    <Image src={trainingPlatformsDji} alt='DJI Logo' width={40} />
+                  <div className='col-span-1 row-span-1 flex items-center justify-center'>
+                    <Image
+                      src={trainingPlatformsDji}
+                      alt='DJI Logo'
+                      width={40}
+                    />
                   </div>
-                  <div className='row-span-1 col-span-1 flex justify-center items-center'>
-                    <Image src={trainingPlatformSkydio} alt='Skydio Logo' width={64} />
+                  <div className='col-span-1 row-span-1 flex items-center justify-center'>
+                    <Image
+                      src={trainingPlatformSkydio}
+                      alt='Skydio Logo'
+                      width={64}
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section id="videos">
+        <section id='videos'>
           <div className='bg-gray-300 py-[1px]' />
-          <div className='mx-auto max-w-7xl py-16 sm:grid sm:grid-cols-2 sm:px-6 lg:px-16 gap-x-4'>
+          <div className='mx-auto max-w-7xl gap-x-4 py-16 sm:grid sm:grid-cols-2 sm:px-6 lg:px-16'>
             <div className='col-span-1'>
-              <h3 className='text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
+              <h3 className='text-center text-2xl font-medium dark:text-zinc-200 md:text-3xl'>
                 Industrial
               </h3>
-              <div className='mt-6 sm:mt-8 flex justify-center items-center w-full'>
+              <div className='mt-6 flex w-full items-center justify-center sm:mt-8'>
                 <Video videoId='850003200' />
               </div>
             </div>
             <div className='col-span-1'>
-              <h3 className='mt-16 sm:mt-0 text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
+              <h3 className='mt-16 text-center text-2xl font-medium dark:text-zinc-200 sm:mt-0 md:text-3xl'>
                 Creative
               </h3>
-              <div className='mt-6 sm:mt-8 flex justify-center items-center w-full'>
-                <Video
-                  videoId='850009575'
-                />
+              <div className='mt-6 flex w-full items-center justify-center sm:mt-8'>
+                <Video videoId='850009575' />
               </div>
             </div>
           </div>
@@ -199,7 +228,7 @@ export default async function Index() {
         <section id='clients'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 sm:px-6 lg:px-16'>
-            <h3 className='text-center text-2xl md:text-3xl font-medium dark:text-zinc-200'>
+            <h3 className='text-center text-2xl font-medium dark:text-zinc-200 md:text-3xl'>
               Our Clients
             </h3>
             <div className='flex items-center justify-center px-8 lg:px-0'>
