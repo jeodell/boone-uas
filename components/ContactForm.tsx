@@ -196,7 +196,7 @@ export default function ContactForm() {
           <select
             id='type-of-service'
             name='typeOfService'
-            className='mt-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
+            className='mt-2 block min-h-[41px] w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-gray-700'
             defaultValue={''}
             ref={typeOfServiceRef}
             onChange={handleChange}
