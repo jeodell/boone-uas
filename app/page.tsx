@@ -51,10 +51,7 @@ export default async function Index() {
               <Slideshow />
             </div>
             <div className='col-span-2 mt-12 flex flex-col items-center justify-center md:mt-24'>
-              <h3 className='text-center text-lg tracking-wide xs:text-xl sm:text-2xl md:text-3xl'>
-                We fly. We film. We deliver.
-              </h3>
-              <div className='mt-12 flex items-center justify-center'>
+              <div className='flex items-center justify-center'>
                 <h4 className='mr-2 font-bold md:text-xl'>Need a drone?</h4>
                 <a
                   className='group flex items-center justify-center'
