@@ -2,10 +2,11 @@
 
 import { SetStateAction, useCallback, useEffect, useState } from 'react'
 
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
+import booneAndCoworker from '../public/images/boone_and_coworker.jpg'
 import droneAutumn from '../public/images/drone_autumn.jpg'
+import droneHillsRiverRailRoad from '../public/images/drone_hills_river_rail_road.jpg'
 import droneNcMutualLife from '../public/images/drone_ncmutuallife.jpg'
 import droneStevensCenter from '../public/images/drone_stevens_center.jpg'
 import droneTrain from '../public/images/drone_train.jpg'
@@ -19,8 +20,27 @@ import overheadOcean from '../public/images/overhead_ocean.jpg'
 import overheadSolar from '../public/images/overhead_solar.jpg'
 import overheadSolarAngled from '../public/images/overhead_solar_angled.jpg'
 import overheadSolarField from '../public/images/overhead_solar_field.jpg'
+import overheadSolarGrid from '../public/images/overhead_solar_grid.jpg'
 
-const images = [droneWinstonSalem, droneTrain, overheadSolar, droneAutumn, overheadHeartLake, overheadOcean, overheadSolarAngled, overheadBeach, droneNcMutualLife, overheadCows, droneStevensCenter, overheadKayaks, overheadApartmentsPool, overheadSolarField]
+const images = [
+  droneWinstonSalem,
+  droneHillsRiverRailRoad,
+  booneAndCoworker,
+  droneTrain,
+  overheadSolar,
+  droneAutumn,
+  overheadHeartLake,
+  overheadOcean,
+  overheadSolarAngled,
+  overheadBeach,
+  droneNcMutualLife,
+  overheadCows,
+  droneStevensCenter,
+  overheadKayaks,
+  overheadApartmentsPool,
+  overheadSolarField,
+  overheadSolarGrid,
+]
 
 // const variants = {
 //   enter: (direction: number) => {
@@ -78,7 +98,7 @@ export default function Slideshow() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
-    }, 5000)
+    }, 4000)
     return () => clearInterval(interval)
   }, [nextSlide])
 
@@ -88,8 +108,9 @@ export default function Slideshow() {
         return (
           <div
             key={index}
-            className={`absolute left-0 top-0 h-full w-full transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
-              }`}
+            className={`absolute left-0 top-0 h-full w-full transition-opacity duration-1000 ${
+              index === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
           >
             <Image
               className='h-full object-contain'
