@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm'
 import Copyright from '../components/Footer'
 import Slideshow from '../components/Slideshow'
 import { Video } from '../components/Video'
+import googleLogo from '../public/google_logo.png'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import booneWithDrone from '../public/images/boone_with_drone.jpg'
 import droneLineup from '../public/images/drone_lineup.png'
@@ -242,9 +243,34 @@ export default async function Index() {
               </h3>
             </div>
           </div>
-          <div className='mx-auto mb-16 max-w-4xl sm:px-6 lg:px-16'>
+          <div className='mx-auto mb-4 max-w-4xl sm:px-6 lg:px-16'>
             <div className='p-8'>
               <ContactForm />
+            </div>
+          </div>
+          <div className='mx-auto mb-16 max-w-4xl sm:px-6 lg:px-16'>
+            <div className='flex items-center justify-center'>
+              <a
+                href='https://www.google.com/maps/place/Boone+UAS,+LLC/@35.0640444,-85.1604702,6z/data=!4m8!3m7!1s0x803bd885a6fa40e9:0x4f02697a201b047b!8m2!3d35.1705075!4d-79.86097!9m1!1b1!16s%2Fg%2F11syq78qht?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='grid grid-cols-5 items-center rounded-lg border-2 border-[#4285f4] bg-[#4285f4] hover:border-[#3367d6] hover:bg-[#3367d6] focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:ring-offset-2'
+              >
+                <div className='col-span-1 flex h-full w-full items-center justify-center rounded-l-md bg-white py-2'>
+                  <Image
+                    src={googleLogo}
+                    alt='Google Logo'
+                    width={24}
+                    height={24}
+                    className='text-white'
+                  />
+                </div>
+                <div className='col-span-4 flex h-full items-center justify-center px-4 py-2'>
+                  <span className='text-md font-bold text-white'>
+                    Leave a Review
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
