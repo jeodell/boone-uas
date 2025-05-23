@@ -8,20 +8,72 @@ import Copyright from '../components/Footer'
 import Slideshow from '../components/Slideshow'
 import { Video } from '../components/Video'
 import googleLogo from '../public/google_logo.png'
+import booneAndCoworker from '../public/images/boone_and_coworker.jpg'
+import booneFlyingDrone1 from '../public/images/boone_flying_drone_1.jpg'
+import booneFlyingDrone2 from '../public/images/boone_flying_drone_2.jpg'
+import boonePackingUpDrone from '../public/images/boone_packing_up_drone.jpg'
 import booneUASLogo from '../public/images/boone_uas_logo.jpg'
 import booneWithDrone from '../public/images/boone_with_drone.jpg'
+import booneWorkingOnDrone1 from '../public/images/boone_working_on_drone_1.jpg'
+import booneWorkingOnDrone2 from '../public/images/boone_working_on_drone_2.jpg'
+import droneAutumn from '../public/images/drone_autumn.jpg'
+import droneHillsRiverRailRoad from '../public/images/drone_hills_river_rail_road.jpg'
 import droneLineup from '../public/images/drone_lineup.png'
+import droneNcMutualLife from '../public/images/drone_ncmutuallife.jpg'
+import droneStevensCenter from '../public/images/drone_stevens_center.jpg'
+import droneTrain from '../public/images/drone_train.jpg'
+import droneWinstonSalem from '../public/images/drone_winston_salem.jpg'
 import faaSeal from '../public/images/faa_seal.jpg'
+import overheadApartmentsPool from '../public/images/overhead_apartments_pool.jpg'
+import overheadBeach from '../public/images/overhead_beach.jpg'
+import overheadCows from '../public/images/overhead_cows.jpg'
+import overheadHeartLake from '../public/images/overhead_heart_lake.jpg'
+import overheadKayaks from '../public/images/overhead_kayaks.jpg'
+import overheadOcean from '../public/images/overhead_ocean.jpg'
+import overheadSolar from '../public/images/overhead_solar.jpg'
+import overheadSolarAngled from '../public/images/overhead_solar_angled.jpg'
+import overheadSolarField from '../public/images/overhead_solar_field.jpg'
+import overheadSolarGrid from '../public/images/overhead_solar_grid.jpg'
 import topOperator from '../public/images/top_operator.png'
 import trainingPlatformsDji from '../public/images/training_platforms_dji.png'
 import trainingPlatformsParrot from '../public/images/training_platforms_parrot.png'
 import trainingPlatformSkydio from '../public/images/training_platforms_skydio.png'
 import trainingPlatformsWingtra from '../public/images/training_platforms_wingtra.png'
 
+const heroImages = [
+  droneWinstonSalem,
+  droneHillsRiverRailRoad,
+  booneAndCoworker,
+  droneTrain,
+  overheadSolar,
+  droneAutumn,
+  overheadHeartLake,
+  overheadOcean,
+  overheadSolarAngled,
+  overheadBeach,
+  droneNcMutualLife,
+  overheadCows,
+  droneStevensCenter,
+  overheadKayaks,
+  overheadApartmentsPool,
+  overheadSolarField,
+  overheadSolarGrid,
+]
+
+const aboutImages = [
+  booneWithDrone,
+  booneFlyingDrone1,
+  booneFlyingDrone2,
+  boonePackingUpDrone,
+  booneWorkingOnDrone1,
+  booneWorkingOnDrone2,
+]
+
 export default async function Index() {
   return (
     <>
       <main id='home'>
+        {/* Hero */}
         <section id='hero'>
           <div className='mx-auto grid max-w-7xl grid-cols-2 px-4 py-16 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex flex-col items-start justify-center px-2'>
@@ -49,7 +101,7 @@ export default async function Index() {
               </div>
             </div>
             <div className='col-span-1 m-auto h-full w-full px-2'>
-              <Slideshow />
+              <Slideshow images={heroImages} aspectRatio='3/4' />
             </div>
             <div className='col-span-2 mt-12 flex flex-col items-center justify-center md:mt-24'>
               <div className='flex items-center justify-center'>
@@ -66,6 +118,8 @@ export default async function Index() {
             </div>
           </div>
         </section>
+
+        {/* Services */}
         <section id='services'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 md:grid md:grid-cols-3 lg:px-16'>
@@ -156,6 +210,8 @@ export default async function Index() {
             </div>
           </div>
         </section>
+
+        {/* Videos */}
         <section id='videos'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl gap-x-4 py-16 sm:grid sm:grid-cols-2 sm:px-6 lg:px-16'>
@@ -177,17 +233,14 @@ export default async function Index() {
             </div>
           </div>
         </section>
+
+        {/* About */}
         <section id='about'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 xs:grid xs:grid-cols-2 xs:divide-x-2 xs:divide-gray-300 sm:px-6 lg:px-16'>
             <div className='col-span-1 flex items-center p-12 xs:p-4 sm:p-8 md:p-16 lg:p-20'>
-              <div>
-                <Image
-                  src={booneWithDrone}
-                  alt='Owner profile picture'
-                  width={480}
-                  height={480}
-                />
+              <div className='w-full'>
+                <Slideshow images={aboutImages} />
               </div>
             </div>
             <div className='col-span-1 flex flex-col items-start justify-center px-8 py-2 xs:p-8'>
@@ -223,6 +276,8 @@ export default async function Index() {
             </div>
           </div>
         </section>
+
+        {/* Clients Slider */}
         <section id='clients'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto max-w-7xl py-16 sm:px-6 lg:px-16'>
@@ -234,6 +289,8 @@ export default async function Index() {
             </div>
           </div>
         </section>
+
+        {/* Contact Form */}
         <section id='contact'>
           <div className='bg-gray-300 py-[1px]' />
           <div className='mx-auto mb-4 mt-16 max-w-4xl sm:px-6 lg:px-16'>
@@ -274,6 +331,8 @@ export default async function Index() {
             </div>
           </div>
         </section>
+
+        {/* Footer */}
         <section id='footer'>
           <Copyright />
         </section>
