@@ -101,14 +101,16 @@ export default async function Index() {
                 />
               </div>
               <div className='mx-1 mt-4 xs:mx-[0.5rem] sm:mx-3 md:mx-4 md:mt-6 lg:mx-5 lg:mt-8 xl:mx-6'>
-                <div className='flex items-center rounded-full bg-black/90 px-6 py-2 text-white shadow-md dark:bg-gray-600'>
-                  <span className='text-base font-semibold'>Serving NC</span>
+                <div className='flex items-center rounded-full bg-black/90 px-3 py-1.5 text-white shadow-md dark:bg-gray-600 sm:px-4 sm:py-1.5 md:px-6 md:py-2'>
+                  <span className='text-xs font-semibold sm:text-sm md:text-lg'>
+                    Serving NC
+                  </span>
                   <Image
                     src={ncStateIcon}
                     alt='North Carolina State Icon'
                     width={48}
                     height={48}
-                    className='ml-2 brightness-0 invert filter'
+                    className='ml-2 h-[0.5rem] w-[1.5rem] brightness-0 invert filter md:h-[1rem] md:w-[3.25rem]'
                   />
                 </div>
               </div>
