@@ -39,6 +39,7 @@ import trainingPlatformsDji from '../public/images/training_platforms_dji.png'
 import trainingPlatformsParrot from '../public/images/training_platforms_parrot.png'
 import trainingPlatformSkydio from '../public/images/training_platforms_skydio.png'
 import trainingPlatformsWingtra from '../public/images/training_platforms_wingtra.png'
+import ncStateIcon from '../public/nc.svg'
 
 const heroImages = [
   droneWinstonSalem,
@@ -98,6 +99,18 @@ export default async function Index() {
                   width={400}
                   height={100}
                 />
+              </div>
+              <div className='mx-1 mt-4 xs:mx-[0.5rem] sm:mx-3 md:mx-4 md:mt-6 lg:mx-5 lg:mt-8 xl:mx-6'>
+                <div className='flex items-center rounded-full bg-black/90 px-6 py-2 text-white shadow-md dark:bg-gray-600'>
+                  <span className='text-base font-semibold'>Serving NC</span>
+                  <Image
+                    src={ncStateIcon}
+                    alt='North Carolina State Icon'
+                    width={48}
+                    height={48}
+                    className='ml-2 brightness-0 invert filter'
+                  />
+                </div>
               </div>
             </div>
             <div className='col-span-1 m-auto h-full w-full px-2'>
