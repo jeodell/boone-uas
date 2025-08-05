@@ -116,7 +116,7 @@ export default async function Index() {
                   </p>
                 </a>
               </div>
-              <div className='mt-4 flex items-center justify-center md:mt-6'>
+              <div className='mt-6 flex items-center justify-center md:mt-8'>
                 <div className='flex items-center rounded-full bg-black/90 px-2 py-1 text-white shadow-md dark:bg-gray-600 sm:px-3 sm:py-1 md:px-4 md:py-1.5'>
                   <span className='text-xs font-semibold sm:text-xs md:text-sm'>
                     Serving NC
